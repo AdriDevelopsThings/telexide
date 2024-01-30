@@ -130,6 +130,7 @@ pub enum StickerType {
     Mask,
     #[serde(rename = "custom_emoji")]
     CustomEmoji,
+    Unknown(String)
 }
 
 #[derive(Serialize, Deserialize, Debug, Clone, PartialEq, Eq)]
