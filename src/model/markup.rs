@@ -52,6 +52,7 @@ pub struct InlineKeyboardButton {
     /// Label text on the button
     pub text: String,
     /// HTTP or tg:// url to be opened when button is pressed
+    #[serde(skip_serializing_if = "Option::is_none")] 
     pub url: Option<String>,
     /// An HTTP URL used to automatically authorize the user.
     /// Can be used as a replacement for the [Telegram Login Widget][widget].
